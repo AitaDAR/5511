@@ -9,17 +9,16 @@
 
 //[0, 3+1) => 0,1,2,3 в диапазон не включено наше число 3
 int number = new Random().Next(10, 100);
-// // [10,9S9] или [10,100)
-// // "/" - деление, "%" - взятие остатка
-// int firstDigit = number / 10; // 78 / 10 = 7
-// int secondDigit = number % 10; // 78 % 10 = 8
-// // max = 7
-// int max = firstDigit; // Пусть максимум - 1 цифра числа
-// if (secondDigit > max) // secondDigit(8) > max(7)
-// {
-//     max = secondDigit; // max = 8
-// }
-Console.WriteLine($"Рандомное число из диапазона [10,99]: {number}");
+// [10,9S9] или [10,100)
+// "/" - деление, "%" - взятие остатка
+int firstDigit = number / 10; // 78 / 10 = 7
+int secondDigit = number % 10; // 78 % 10 = 8
+int max = firstDigit; // max = 7 Пусть максимум - 1 цифра числа
+if (secondDigit > max) // secondDigit(8) > max(7)
+{
+    max = secondDigit; // max = 8
+}
+Console.WriteLine($"Максимальная цифра в числе {number}: {max}");
 
 // Напишите программу, которая выводит случайное 
 // трехзначное число и 
